@@ -84,7 +84,7 @@ legend { margin-bottom: 12px; }
 .story.is-visible { display: block; }
 .hero { min-height: 100svh; position: relative; display: flex; align-items: flex-end; overflow: hidden; padding: 120px clamp(20px, 8vw, 120px) 88px; background: #050a11; }
 .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2,6,11,.93) 0%, rgba(2,6,11,.35) 55%, rgba(2,6,11,.55) 100%), linear-gradient(0deg, #03070d 0%, transparent 28%); }
-.hero-image { position: absolute; inset: -6%; background: radial-gradient(circle at 70% 30%, #123947, #050910 58%); background-image: url('assets/aegis-city.png'); background-size: cover; background-position: center; transform: scale(1.1); will-change: transform; }
+.hero-image { position: absolute; inset: -6%; background: radial-gradient(circle at 70% 30%, #123947, #050910 58%); background-image: url('assets/aegis-city.jpg'); background-size: cover; background-position: center; transform: scale(1.1); will-change: transform; }
 .hero-scan { position: absolute; z-index: 2; inset: 0; background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(138,224,240,.018) 4px); mix-blend-mode: screen; }
 .hero-copy { position: relative; z-index: 3; }
 .hero-copy h2 { max-width: 900px; margin-bottom: 24px; font-size: clamp(4rem, 9.4vw, 9.6rem); font-weight: 500; line-height: .82; letter-spacing: -.078em; }
