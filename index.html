@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050a13" />
+    <meta
+      name="description"
+      content="Enter The Aegis Initiative and discover your original cinematic superhero identity."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>The Aegis Initiative</title>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="The Aegis Initiative home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>AEGIS / PERSONNEL</span>
+      </a>
+      <button class="text-button" id="resetButton" type="button">Reset file</button>
+    </header>
+
+    <main id="top">
+      <section class="intake" id="intake" aria-labelledby="intakeTitle">
+        <div class="intake-copy">
+          <p class="eyebrow">Secure recruitment channel · 07</p>
+          <h1 id="intakeTitle">You were never ordinary.</h1>
+          <p class="lede">
+            Step into an original cinematic universe. We’ll assemble your clearance,
+            callsign and field record—all inside your browser.
+          </p>
+          <div class="privacy-note">
+            <span class="pulse" aria-hidden="true"></span>
+            Your photo never leaves this device.
+          </div>
+        </div>
+
+        <form class="intake-card" id="identityForm">
+          <div class="step-label"><span>01</span> Identify yourself</div>
+          <label for="nameInput">Full name</label>
+          <input id="nameInput" name="name" autocomplete="name" maxlength="42" placeholder="e.g. Maya Chen" required />
+
+          <label for="callsignInput">Callsign <span>optional</span></label>
+          <input id="callsignInput" name="callsign" maxlength="22" placeholder="We can assign one" />
+
+          <fieldset>
+            <legend>Choose your division</legend>
+            <div class="role-grid">
+              <label class="role-option">
+                <input type="radio" name="role" value="vanguard" checked />
+                <span><b>Vanguard</b><small>Field systems & rescue</small></span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="role" value="spectral" />
+                <span><b>Spectral</b><small>Intelligence & signals</small></span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="role" value="forge" />
+                <span><b>Forge</b><small>Advanced technology</small></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="upload-zone" id="uploadZone">
+            <input id="photoInput" type="file" accept="image/png,image/jpeg,image/webp" required />
+            <div class="upload-preview" id="uploadPreview" aria-hidden="true"></div>
+            <div class="upload-copy">
+              <b id="uploadTitle">Add your portrait</b>
+              <span id="uploadHint">Drop a clear photo here or choose a file</span>
+            </div>
+            <button class="upload-button" id="choosePhoto" type="button">Choose photo</button>
+          </div>
+
+          <label class="consent">
+            <input id="consentInput" type="checkbox" required />
+            <span>I confirm this is my photo and I consent to using it in this experience.</span>
+          </label>
+
+          <button class="primary-button" type="submit">
+            <span>Generate my identity</span>
+            <span class="button-code">A-01</span>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <div class="story" id="story" aria-hidden="true">
+        <section class="hero" id="hero">
+          <div class="hero-image" id="heroImage" aria-hidden="true"></div>
+          <div class="hero-scan" aria-hidden="true"></div>
+          <div class="hero-copy">
+            <p class="eyebrow">Aegis Initiative · Candidate confirmed</p>
+            <h2>Welcome,<br /><span data-person-name>Operative</span>.</h2>
+            <p>You have been cleared for active service.</p>
+          </div>
+          <div class="scroll-cue" aria-hidden="true"><span></span> Scroll to declassify</div>
+        </section>
+
+        <section class="reveal-section dossier-section">
+          <div class="section-index">FILE / 001</div>
+          <div class="portrait-wrap">
+            <div class="portrait-frame">
+              <img class="person-photo" alt="Uploaded portrait" />
+              <div class="portrait-overlay"><span>IDENTITY MATCH</span><b>99.8%</b></div>
+            </div>
+            <p>Biometric source remains local to this device</p>
+          </div>
+          <article class="dossier-copy">
+            <p class="eyebrow">Personnel dossier</p>
+            <h2 data-person-name>Operative</h2>
+            <dl>
+              <div><dt>Callsign</dt><dd data-callsign>Northstar</dd></div>
+              <div><dt>Division</dt><dd data-role-name>Vanguard</dd></div>
+              <div><dt>Clearance</dt><dd>Obsidian / 07</dd></div>
+              <div><dt>Status</dt><dd class="active-status">Active</dd></div>
+            </dl>
+            <p class="bio" data-bio></p>
+          </article>
+        </section>
+
+        <section class="quote-section reveal-section">
+          <p class="eyebrow">Director’s assessment</p>
+          <blockquote data-quote></blockquote>
+          <p class="signature">— Director Elian Voss</p>
+        </section>
+
+        <section class="reveal-section mission-section">
+          <div class="mission-heading">
+            <p class="eyebrow">First deployment</p>
+            <h2>Operation<br />Glass Horizon</h2>
+          </div>
+          <div class="mission-card">
+            <div class="mission-map" aria-hidden="true">
+              <span class="ring ring-one"></span><span class="ring ring-two"></span><i></i>
+            </div>
+            <div class="mission-details">
+              <span>Location / Meridian City</span>
+              <span>Threat / Cascade event</span>
+              <span>Team / Unit 07</span>
+            </div>
+            <p data-mission></p>
+          </div>
+        </section>
+
+        <section class="certificate-section reveal-section">
+          <div class="certificate" id="certificate">
+            <div class="certificate-topline"><span>THE AEGIS INITIATIVE</span><span>EST. 2041</span></div>
+            <div class="seal" aria-hidden="true"><span>A</span></div>
+            <p>This certifies that</p>
+            <h2 data-person-name>Operative</h2>
+            <p>has been appointed to the</p>
+            <h3><span data-role-name>Vanguard</span> Division</h3>
+            <p class="certificate-copy">For exceptional judgment under pressure and service beyond the expected limits of duty.</p>
+            <div class="certificate-signatures">
+              <div><b>Elian Voss</b><span>Executive Director</span></div>
+              <div><b id="certificateDate"></b><span>Date of appointment</span></div>
+            </div>
+          </div>
+          <div class="certificate-actions">
+            <p class="eyebrow">Your appointment is official</p>
+            <h2>The city is waiting.</h2>
+            <button class="primary-button" id="downloadCertificate" type="button">
+              <span>Download certificate</span><span class="button-code">PNG</span>
+            </button>
+            <button class="text-button restart-link" id="restartButton" type="button">Create another identity</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <span>Original prototype universe</span>
+      <span>No affiliation with existing entertainment franchises</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
